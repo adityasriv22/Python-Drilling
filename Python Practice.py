@@ -71,17 +71,12 @@ for i in range(0,k):
     l.append(a)
 #Total  sum
 """
-l=[12,345,678,23,12,68]
+l=[12,345,678,23,68]
 msum=0
-for i in range(len(l)):
-    #for j in range(len(l) - 1):
-    if l[i]<l[i+1]:
-        temp=l[i]
-        l[i]=l[i+1]
-        l[i+1]=temp #[12,45,53]
-
-"""
+l.sort(reverse=True)
+for i in range(len(l)-1):
+    msum=msum+l[i]
 
 
-print (l)
+print (msum)
 #min sum
