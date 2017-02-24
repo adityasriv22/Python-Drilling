@@ -2,10 +2,10 @@
 
 num = int(raw_input("input a number "))
 flag=0
-for i in range(1,num+1):
+for i in range(2,num+1):
     if num % i==0:
         flag=flag+1
-print flag
+#print flag
 
 if flag > 2:
     print "No is not prime"
