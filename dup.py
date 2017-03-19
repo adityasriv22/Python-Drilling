@@ -1,5 +1,4 @@
-"""
-logic behind the c language
+"""/*
 #include<stdio.h>
 #include<conio.h>
 void main()
@@ -47,19 +46,58 @@ void main()
    }
 getch();
 }
-"""
+*/
 
-l=[]
-k=int(raw_input("Enter the number of elements to add into the list: "))
-for i in range(0,k):
-    a=int(raw_input("+_+ : "))
-    l.append(a)
-print l
 l2=[]
-for i in range(len(l)):
-   c=l.count(i)  
-   if c > 1:
-      l2.append(l[i])
+l=[1,1,2,11,23,1,1,2]
+count=0
+for i in l:
+   q = l.index(i)
+   for j in l:
+      r=l.index(j)
+      if q == r:   
+         print "Same Value Counter"
+      else:
+         if i == j:
+            count+=1
+            l2.append(i)
+   if count > 1:
+      print "Duplilcate elements: ",l2
+      count =0
+      del l2[:]
+"""      
+l2=[]
+l=[1,1,2,11,23,1,1,2,23,45,78,87,65,45]
+count=0
+for i in l:
+   for j in l:
+      
+
+      if i == j:
+         count+=1
+   if count > 1:
+      l2.append(i)
+   if i in l2:
+      l2.pop(i)
+   count=0
 print l2
 
-            
+"""
+   for j in l:
+      if i == j:
+         count+=1
+   if count > 1:
+      print i
+      l2.append(i)
+   count = 0
+print l2
+"""
+
+
+
+
+
+
+
+
+
